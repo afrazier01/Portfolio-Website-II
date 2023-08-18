@@ -1,37 +1,70 @@
 import React from 'react';
-import { FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa';
+
 
 const projects = [
-    {
-      title: 'Sunset Sunrise Times',
-      imageUrl: '/src/assets/project1.jpeg',
-      link: 'https://github.com/garciajv86/SunsetSunriseTimes',
-    },
-    {
-      title: 'Nifty Thrifty',
-      imageUrl: '/src/assets/project2.jpeg',
-      link: 'https://github.com/IvySMac/Project-2',
-    },
-    // Add more projects...
-  ];
+  {
+    title: 'Social Network API',
+    imageUrl: '/src/assets/challenge-18.png',
+    description:'',
+    link: 'https://github.com/afrazier01/Social-Network-API',
+  },
+  {
+    title: 'File Parsing Script',
+    imageUrl: '/src/assets/python.png',
+    link: 'https://github.com/afrazier01/File-Parsing',
+  },
+  {
+    title: 'E-Commerce Back-End',
+    imageUrl: '/src/assets/challenge-13.png',
+    link: 'https://github.com/afrazier01/E-Commerce-Back-End',
+  },
+  {
+    title: 'Employee Content Management System',
+    imageUrl: '/src/assets/challenge-12.png',
+    link: 'https://github.com/afrazier01/Employee-Tracker',
+  },
+  {
+    title: 'Weather Dashboard',
+    imageUrl: '/src/assets/challenge-6.png',
+    description:'',
+    link: 'https://github.com/afrazier01/Weather-Dashboard',
+  },
+  {
+    title: 'Password Generator',
+    imageUrl: '/src/assets/challenge-3.png',
+    link: 'https://github.com/afrazier01/Password-Generator',
+  },
+  {
+    title: 'Coding Quiz',
+    imageUrl: '/src/assets/challenge-4.png',
+    link: 'https://github.com/afrazier01/Timed-Quiz',
+  },
+  {
+    title: 'README Generator',
+    imageUrl: '/src/assets/challenge-9.png',
+    link: 'https://github.com/afrazier01/README-Generator',
+  },
+  {
+    title: 'SVG Generator',
+    imageUrl: '/src/assets/challenge-10.png',
+    link: 'https://github.com/afrazier01/Logo-Maker',
+  },
+];
 
-const Project = () => {
+const Projects = () => {
   return (
-    <div className="project">
-      <div className="projects">
-        <a href="https://github.com/Kdubb219">
-          <FaGithub /> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/kyla-wise-b450b1104/">
-          <FaLinkedin /> LinkedIn
-        </a>
-        <a href="https://www.instagram.com/kwise219">
-          <FaInstagram /> Instagram
-        </a>
+    <section className="projects-section">
+      
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <a key={index} href={project.link} className="project-link">
+            <img src={project.imageUrl} className='headshot' alt={project.title} />
+            <div className="project-title">{project.title}</div> 
+          </a>
+        ))}
       </div>
-      <p>&copy; 2023 Kyla's Developer Portfolio</p>
-    </div>
+    </section>
   );
 };
 
-export default Project;
+export default Projects;

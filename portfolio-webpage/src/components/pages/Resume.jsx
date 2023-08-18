@@ -1,11 +1,13 @@
 import React from 'react';
-// import Resume from '../../assets/resume.pdf'
+import {VscChevronRight} from 'react-icons/vsc';
 
 export default function Resume() {
     return (
       <div>
-        <h1>Download my resume</h1>
-        <a href=''>click</a>
+        <h1>View My Resume</h1>
+        <a href="../../src/assets/resume.pdf">
+          <VscChevronRight /> Updated - 08.09.2023
+        </a>
       </div>
     );
   }
